@@ -72,11 +72,12 @@ const Navbar = () => {
                             {link.name}
                         </motion.a>
                     ))}
-                    <div className="nav-socials">
-                        <a href="https://github.com/Abdurrahman680" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                        <a href="https://www.linkedin.com/in/muhammad-abdurrahman-9471b1252" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                        <a href="https://www.instagram.com/abdurrahman_developer?igsh=bWYxMWVlZWcycmNw" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                    </div>
+                </div>
+
+                <div className="nav-socials desktop-only">
+                    <a href="https://github.com/Abdurrahman680" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                    <a href="https://www.linkedin.com/in/muhammad-abdurrahman-9471b1252" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                    <a href="https://www.instagram.com/abdurrahman_developer?igsh=bWYxMWVlZWcycmNw" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                 </div>
 
                 {/* Mobile Menu Icon */}

@@ -253,7 +253,6 @@ h5 {
   display: flex;
   gap: 1.2rem;
   align-items: center;
-  margin-left: 1rem;
 }
 
 .nav-socials a {
@@ -272,7 +271,7 @@ h5 {
     display: none !important;
   }
 
-  .nav-socials {
+  .nav-socials.desktop-only {
     display: none !important;
   }
 }
@@ -738,6 +737,11 @@ h5 {
   margin-bottom: 1.2rem;
   color: var(--text-color);
   font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 3rem);
 }
 
 .social-links {
