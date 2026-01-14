@@ -77,7 +77,10 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                onClick={() => setIsOpen(false)}
+                                onClick={(e) => {
+                                    // Small delay to allow browser to process link before unmounting
+                                    setTimeout(() => setIsOpen(false), 100);
+                                }}
                             >
                                 {link.name}
                             </a>
