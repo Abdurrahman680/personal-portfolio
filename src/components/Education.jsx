@@ -82,7 +82,7 @@ const Education = () => {
                 <div className="education-actions-wrapper">
                     {/* CV Download Button */}
                     <motion.a
-                        href="/Muhammad_Abdurrahman_CV.pdf"
+                        href="/cv.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cv-download-btn glass"

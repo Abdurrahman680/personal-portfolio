@@ -162,7 +162,7 @@ const Contact = () => {
                                     <div className="info-content">
                                         <h4>WhatsApp</h4>
                                         <p>+92 330-9316883</p>
-                                        <p>+92 329-5209042</p>
+                                        <p>+92 329-5209043</p>
                                     </div>
                                 </motion.div>
 
