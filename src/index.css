@@ -269,11 +269,11 @@ h5 {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none !important;
   }
 
   .nav-socials {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -738,9 +738,11 @@ h5 {
   font-weight: 600;
 }
 
-.nav-links {
+.social-links {
   display: flex;
-  gap: clamp(1.2rem, 3vw, 2.5rem);
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-link {
