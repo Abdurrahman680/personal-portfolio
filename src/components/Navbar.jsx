@@ -27,6 +27,27 @@ const Navbar = () => {
         { name: 'Contact', href: '#contact' },
     ];
 
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        const targetId = href.replace('#', '');
+        const elem = document.getElementById(targetId);
+
+        if (elem) {
+            setIsOpen(false);
+            // Wait for menu animation to finish slightly
+            setTimeout(() => {
+                const offset = 80; // Navbar height
+                const elementPosition = elem.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 300);
+        }
+    };
+
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-content">
@@ -77,10 +98,7 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                onClick={(e) => {
-                                    // Small delay to allow browser to process link before unmounting
-                                    setTimeout(() => setIsOpen(false), 100);
-                                }}
+                                onClick={(e) => handleNavClick(e, link.href)}
                             >
                                 {link.name}
                             </a>
