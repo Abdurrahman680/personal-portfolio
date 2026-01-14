@@ -243,16 +243,26 @@ h5 {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.5px;
+  flex: 1;
 }
 
 .logo-accent {
   color: var(--primary-color);
 }
 
+.nav-links {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  flex: 2;
+  justify-content: center;
+}
+
 .nav-socials {
   display: flex;
   gap: 1.2rem;
   align-items: center;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .nav-socials a {
@@ -266,13 +276,28 @@ h5 {
   transform: translateY(-2px);
 }
 
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .logo {
+    flex: auto;
+  }
+
   .nav-links {
     display: none !important;
   }
 
   .nav-socials.desktop-only {
     display: none !important;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
   }
 }
 
