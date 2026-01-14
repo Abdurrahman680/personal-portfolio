@@ -34,9 +34,8 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     className="logo"
-                    style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
                 >
-                    <span style={{ color: 'var(--primary-color)' }}>Port</span>folio.
+                    <span className="logo-accent">Port</span>folio.
                 </motion.div>
 
                 {/* Desktop Menu */}
@@ -52,10 +51,10 @@ const Navbar = () => {
                             {link.name}
                         </motion.a>
                     ))}
-                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginLeft: '1rem' }}>
-                        <a href="https://github.com/Abdurrahman680" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.2rem' }}><FaGithub /></a>
-                        <a href="https://www.linkedin.com/in/muhammad-abdurrahman-9471b1252" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.2rem' }}><FaLinkedin /></a>
-                        <a href="https://www.instagram.com/abdurrahman_developer?igsh=bWYxMWVlZWcycmNw" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.2rem' }}><FaInstagram /></a>
+                    <div className="nav-socials">
+                        <a href="https://github.com/Abdurrahman680" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                        <a href="https://www.linkedin.com/in/muhammad-abdurrahman-9471b1252" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                        <a href="https://www.instagram.com/abdurrahman_developer?igsh=bWYxMWVlZWcycmNw" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                     </div>
                 </div>
 

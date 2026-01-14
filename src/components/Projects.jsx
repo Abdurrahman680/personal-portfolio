@@ -41,13 +41,12 @@ const Projects = () => {
             <motion.h2
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="title"
-                style={{ marginBottom: '3rem' }}
+                className="section-title"
             >
                 Featured Projects
             </motion.h2>
 
-            <div className="projects-grid" style={{ marginBottom: '5rem' }}>
+            <div className="projects-grid featured-projects">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
@@ -58,23 +57,23 @@ const Projects = () => {
                         className="project-card glass"
                     >
                         {project.image ? (
-                            <div style={{ height: '180px', marginBottom: '1rem', overflow: 'hidden', borderRadius: '10px' }}>
-                                <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <div className="project-image-container">
+                                <img src={project.image} alt={project.title} className="project-image" />
                             </div>
                         ) : (
-                            <div style={{ height: '150px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px', marginBottom: '1rem' }}></div>
+                            <div className="project-image-placeholder"></div>
                         )}
-                        <h3 style={{ marginBottom: '0.5rem' }}>{project.title}</h3>
-                        <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>{project.description}</p>
-                        <div className="flex" style={{ gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                        <h3 className="project-title">{project.title}</h3>
+                        <p className="project-description">{project.description}</p>
+                        <div className="project-tags">
                             {project.tags.map(tag => (
-                                <span key={tag} style={{ fontSize: '0.8rem', padding: '0.2rem 0.6rem', borderRadius: '20px', background: 'rgba(161, 140, 209, 0.2)', color: '#fff' }}>
+                                <span key={tag} className="project-tag">
                                     {tag}
                                 </span>
                             ))}
                         </div>
                         {project.link && (
-                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary project-btn">
                                 View Project
                             </a>
                         )}
@@ -85,8 +84,7 @@ const Projects = () => {
             <motion.h2
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="title"
-                style={{ marginBottom: '3rem', fontSize: '2rem' }}
+                className="section-title small-projects-title"
             >
                 Small Projects
             </motion.h2>
@@ -102,23 +100,23 @@ const Projects = () => {
                         className="project-card glass"
                     >
                         {project.image ? (
-                            <div style={{ height: '180px', marginBottom: '1rem', overflow: 'hidden', borderRadius: '10px' }}>
-                                <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <div className="project-image-container">
+                                <img src={project.image} alt={project.title} className="project-image" />
                             </div>
                         ) : (
-                            <div style={{ height: '150px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px', marginBottom: '1rem' }}></div>
+                            <div className="project-image-placeholder"></div>
                         )}
-                        <h3 style={{ marginBottom: '0.5rem' }}>{project.title}</h3>
-                        <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>{project.description}</p>
-                        <div className="flex" style={{ gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                        <h3 className="project-title">{project.title}</h3>
+                        <p className="project-description">{project.description}</p>
+                        <div className="project-tags">
                             {project.tags.map(tag => (
-                                <span key={tag} style={{ fontSize: '0.8rem', padding: '0.2rem 0.6rem', borderRadius: '20px', background: 'rgba(161, 140, 209, 0.2)', color: '#fff' }}>
+                                <span key={tag} className="project-tag">
                                     {tag}
                                 </span>
                             ))}
                         </div>
                         {project.link && (
-                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '0.9rem' }}>
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary project-btn">
                                 View Code
                             </a>
                         )}

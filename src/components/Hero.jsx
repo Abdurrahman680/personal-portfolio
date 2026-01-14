@@ -25,7 +25,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        style={{ fontSize: '1.2rem', marginBottom: '2rem', lineHeight: '1.6', color: '#ccc' }}
+                        className="hero-description"
                     >
                         I build wonderful, accessible, and high-performance digital experiences, with a strong focus on crafting premium and user-friendly interfaces.
                     </motion.p>
@@ -33,8 +33,9 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
+                        className="hero-btns"
                     >
-                        <a href="#projects" className="btn btn-primary" style={{ marginRight: '1rem' }}>View Work</a>
+                        <a href="#projects" className="btn btn-primary">View Work</a>
                         <a href="#contact" className="btn btn-outline">Contact Me</a>
                     </motion.div>
                 </div>
@@ -55,22 +56,13 @@ const Hero = () => {
                             repeat: Infinity,
                             ease: "easeInOut"
                         }}
+                        className="hero-image-wrapper"
                     >
-                        <div className="glass" style={{
-                            width: '350px',
-                            height: '350px',
-                            margin: '0 auto',
-                            borderRadius: '50%',
-                            position: 'relative',
-                            zIndex: 1,
-                            overflow: 'hidden',
-                            border: '5px solid rgba(255, 255, 255, 0.1)',
-                            boxShadow: '0 0 40px rgba(161, 140, 209, 0.3)'
-                        }}>
+                        <div className="profile-img-container glass">
                             <img
                                 src="/Photo_Abdurrahman.png"
                                 alt="Muhammad Abdurrahman"
-                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                className="profile-img"
                             />
                         </div>
                     </motion.div>
