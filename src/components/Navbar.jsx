@@ -77,7 +77,7 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                onClick={toggleMenu}
+                                onClick={() => setIsOpen(false)}
                             >
                                 {link.name}
                             </a>
